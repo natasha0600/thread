@@ -1,0 +1,8 @@
+A execução demonstra a condição de corrida.
+No cenário sem proteção, com duas threads incrementando uma variável 1000 vezes cada,
+o resultado foi 1874 (incorreto), pois operações simultâneas levaram à "perda" de incrementos.
+Já no cenário com proteção (Lock), o resultado foi 2000 (correto).
+Isso ocorreu porque o mecanismo de sincronização garantiu que apenas uma thread por
+vez acessasse a variável, prevenindo interferências e assegurando a integridade dos
+dados compartilhados.
+
